@@ -5,7 +5,7 @@ interface ButtonProps {
   className?: string;
   variant?: 'default' | 'outline';
   children: React.ReactNode;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const Button = ({
