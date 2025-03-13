@@ -11,7 +11,7 @@ export default function Home() {
           Find a Flight Companion
         </h2>
         <p className='text-gray-600 mt-2'>
-          Whether you're a parent traveling with kids or need assistance during
+          Whether you&apos;re a parent traveling with kids or need assistance during
           your flight, find a reliable companion to make your journey easier.
         </p>
 
