@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { FaHeart, FaPlaneDeparture, FaBars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { Button } from './ui/button'
 import { useState } from 'react'
+import Image from 'next/image'
+import logo from '~public/logo.png'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +14,8 @@ export default function Nav() {
     <header className='w-full bg-white shadow-md p-4 flex items-center justify-between sticky top-0 z-50'>
       <Link href='/'>
         <h1 className='text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-2'>
-          <FaPlaneDeparture /> Flight Sitter <FaHeart />
+          <Image src={logo} alt='Flight Sitter logo' width={50} />
+          Flight Sitter
         </h1>
       </Link>
 
