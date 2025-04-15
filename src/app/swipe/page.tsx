@@ -1,7 +1,7 @@
-// app/swipe/page.tsx
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
@@ -43,19 +43,34 @@ const sitters: Sitter[] = [
 
 export default function SwipePage() {
   const [cardIndex, setCardIndex] = useState(0)
-  const [swiped, setSwiped] = useState<{ id: number; direction: string }[]>([])
+  const [match, setMatch] = useState(false)
+  const router = useRouter()
 
   const handleSwipe = (direction: 'left' | 'right', id: number) => {
-    setSwiped((prev) => [...prev, { id, direction }])
+    if (direction === 'right') {
+      setMatch(true)
+      setTimeout(() => {
+        router.push('/parent-signup')
+      }, 700)
+    }
     setCardIndex((prev) => prev + 1)
   }
-  console.log(swiped)
 
   return (
     <div className='min-h-screen bg-gradient-to-b from-blue-100 to-white flex flex-col items-center justify-center p-4'>
       <h1 className='text-3xl font-bold mb-6'>
         Find Your Perfect Flight Sitter
       </h1>
+
+      {match && (
+        <motion.div
+          className='text-green-600 text-2xl font-bold mb-4'
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}>
+          🎉 It's a match!
+        </motion.div>
+      )}
+
       <div className='relative w-80 h-[500px]'>
         <AnimatePresence>
           {sitters.slice(cardIndex, cardIndex + 1).map((sitter) => (
@@ -91,7 +106,8 @@ export default function SwipePage() {
           ))}
         </AnimatePresence>
       </div>
-      {cardIndex >= sitters.length && (
+
+      {cardIndex >= sitters.length && !match && (
         <p className='mt-6 text-lg text-gray-700'>No more sitters to show 🚀</p>
       )}
     </div>
