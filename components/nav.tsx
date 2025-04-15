@@ -11,8 +11,11 @@ export default function Nav() {
         </h1>
       </Link>
       <nav>
-        <Link href='/login'>
-          <Button variant='outline'>Login</Button>
+        <Link className='mx-2' href='/parent-signup'>
+          <Button variant='outline'>Parent Login</Button>
+        </Link>
+        <Link className='mx-2' href='/sitter-signup'>
+          <Button>Sitter Login</Button>
         </Link>
       </nav>
     </header>
