@@ -49,6 +49,7 @@ export default function SwipePage() {
     setSwiped((prev) => [...prev, { id, direction }])
     setCardIndex((prev) => prev + 1)
   }
+  console.log(swiped)
 
   return (
     <div className='min-h-screen bg-gradient-to-b from-blue-100 to-white flex flex-col items-center justify-center p-4'>
