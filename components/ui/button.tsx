@@ -15,7 +15,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const variants = {
-    default: 'bg-blue-500 hover:bg-blue-600 text-white',
+    default: 'bg-indigo-600 hover:bg-indigo-500 text-white',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-100',
   }
   return (
