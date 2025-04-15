@@ -47,6 +47,8 @@ export default function SwipePage() {
   const router = useRouter()
 
   const handleSwipe = (direction: 'left' | 'right', id: number) => {
+    console.log(`User swiped ${direction} on sitter ${id}`)
+
     if (direction === 'right') {
       setMatch(true)
       setTimeout(() => {
