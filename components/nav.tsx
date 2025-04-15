@@ -5,7 +5,8 @@ import { FaBars } from 'react-icons/fa'
 import { Button } from './ui/button'
 import { useState } from 'react'
 import Image from 'next/image'
-import logo from '~public/logo.png'
+import logo from '~public/logo.svg'
+import Logo from './logo'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -14,7 +15,8 @@ export default function Nav() {
     <header className='w-full bg-white shadow-md p-4 flex items-center justify-between sticky top-0 z-50'>
       <Link href='/'>
         <h1 className='text-xl md:text-2xl font-bold text-gray-800 flex items-center gap-2'>
-          <Image src={logo} alt='Flight Sitter logo' width={50} />
+          {/* <Image src={logo} alt='Flight Sitter logo' width={50} /> */}
+          <Logo />
           Flight Sitter
         </h1>
       </Link>
