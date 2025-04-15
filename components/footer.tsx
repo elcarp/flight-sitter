@@ -98,13 +98,11 @@ export default function Footer() {
           <div className='space-y-8'>
             <Logo plane='#ffffff' />
             <p className='text-sm/6 text-balance text-gray-300'>
-              At Flight Sitter, we connect traveling families with trusted,
-              compassionate companions to make every journey smoother, safer,
-              and more joyful. Our mission is to empower parents to travel with
-              confidence by providing a network of experienced sitters who care
-              deeply about kids — and the journey they take together. Whether
-              it&apos;s across continents or just across town, we&apos;re here
-              to support families in motion.
+              Empowering parents to travel with confidence by providing a
+              network of experienced sitters who care deeply about kids — and
+              the journey they take together. Whether it&apos;s across
+              continents or just across town, we&apos;re here to{' '}
+              <strong>support families in motion</strong>.
             </p>
             <div className='flex gap-x-6'>
               {navigation.social.map((item) => (
