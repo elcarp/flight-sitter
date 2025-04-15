@@ -67,7 +67,7 @@ export default function SwipePage() {
           className='text-green-600 text-2xl font-bold mb-4'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}>
-          🎉 It's a match!
+          🎉 It&apos;s a match!
         </motion.div>
       )}
 
