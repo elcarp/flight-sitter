@@ -23,7 +23,7 @@ export default function ParentSignup() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/parent-dashboard`,
+        redirectTo: `${process.env.NEXT_PUBLIC_REDIRECT_URL}/parent-dashboard`,
       },
     })
     if (error) setError(error.message)

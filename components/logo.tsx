@@ -17,7 +17,7 @@ export default function Logo({ plane }: LogoProps): JSX.Element {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-console.log(plane)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
